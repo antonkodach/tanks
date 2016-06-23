@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{222C33A0-0069-415A-B68A-87A432C6C097}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tanks</RootNamespace>
+    <AssemblyName>Tanks</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Apple.cs" />
+    <Compile Include="AppleImg.cs" />
+    <Compile Include="Controller_MainRorm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller_MainRorm.Designer.cs">
+      <DependentUpon>Controller_MainRorm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FireTank.cs" />
+    <Compile Include="FireTankImg.cs" />
+    <Compile Include="GameStatus.cs" />
+    <Compile Include="Hunter.cs" />
+    <Compile Include="HunterImg.cs" />
+    <Compile Include="ICurentPicture.cs" />
+    <Compile Include="IPicture.cs" />
+    <Compile Include="IRun.cs" />
+    <Compile Include="ITransparent.cs" />
+    <Compile Include="ITurn.cs" />
+    <Compile Include="ITurnAround.cs" />
+    <Compile Include="Model.cs" />
+    <Compile Include="Packman.cs" />
+    <Compile Include="PackmanImg.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Projectile.cs" />
+    <Compile Include="ProjectileImg.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tank.cs" />
+    <Compile Include="TankImg.cs" />
+    <Compile Include="View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wall.cs" />
+    <Compile Include="WallImg.cs" />
+    <EmbeddedResource Include="Controller_MainRorm.resx">
+      <DependentUpon>Controller_MainRorm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MainIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wall.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apple.bmp" />
+    <Content Include="Resources\FireTank\FireTank1.bmp" />
+    <Content Include="Resources\FireTank\FireTank2.bmp" />
+    <Content Include="Resources\FireTank\FireTank3.bmp" />
+    <Content Include="Resources\FireTank\FireTank4.bmp" />
+    <Content Include="Resources\FireTank\FireTank5.bmp" />
+    <Content Include="Resources\FireTank\FireTank6.bmp" />
+    <Content Include="Resources\HunterCaterpilars\Down\HunterImg01.bmp" />
+    <Content Include="Resources\HunterCaterpilars\Down\HunterImg011.bmp" />
+    <Content Include="Resources\HunterCaterpilars\Down\HunterImg012.bmp" />
+    <Content Include="Resources\HunterCaterpilars\Down\HunterImg013.bmp" />
+    <Content Include="Resources\HunterCaterpilars\Down\HunterImg014.bmp" />
+    <Content Include="Resources\HunterCaterpilars\LEFT\HunterImg_10.bmp" />
+    <Content Include="Resources\HunterCaterpilars\LEFT\HunterImg_101.bmp" />
+    <Content Include="Resources\HunterCaterpilars\LEFT\HunterImg_102.bmp" />
+    <Content Include="Resources\HunterCaterpilars\LEFT\HunterImg_103.bmp" />
+    <Content Include="Resources\HunterCaterpilars\LEFT\HunterImg_104.bmp" />
+    <Content Include="Resources\HunterCaterpilars\RIGHT\HunterImg10.bmp" />
+    <Content Include="Resources\HunterCaterpilars\RIGHT\HunterImg101.bmp" />
+    <Content Include="Resources\HunterCaterpilars\RIGHT\HunterImg102.bmp" />
+    <Content Include="Resources\HunterCaterpilars\RIGHT\HunterImg103.bmp" />
+    <Content Include="Resources\HunterCaterpilars\RIGHT\HunterImg104.bmp" />
+    <Content Include="Resources\HunterCaterpilars\UP\HunterImg0_1.bmp" />
+    <Content Include="Resources\HunterCaterpilars\UP\HunterImg0_11.bmp" />
+    <Content Include="Resources\HunterCaterpilars\UP\HunterImg0_12.bmp" />
+    <Content Include="Resources\HunterCaterpilars\UP\HunterImg0_13.bmp" />
+    <Content Include="Resources\HunterCaterpilars\UP\HunterImg0_14.bmp" />
+    <Content Include="Resources\PackmenCaterpilars\Down\PackmanImg01.bmp" />
+    <Content Include="Resources\PackmenCaterpilars\Down\PackmanImg011.bmp" />
+    <Content Include="Resources\PackmenCaterpilars\Down\PackmanImg012.bmp" />
+    <Content Include="Resources\PackmenCaterpilars\Down\PackmanImg013.bmp" />
+    <Content Include="Resources\PackmenCaterpilars\Down\PackmanImg014.bmp" />
+    <Content Include="Resources\PackmenCaterpilars\LEFT\PackmanImg_10.bmp" />
+    <Content Include="Resources\PackmenCaterpilars\LEFT\PackmanImg_101.bmp" />
+    <Content Include="Resources\PackmenCaterpilars\LEFT\PackmanImg_102.bmp" />
+    <Content Include="Resources\PackmenCaterpilars\LEFT\PackmanImg_103.bmp" />
+    <Content Include="Resources\PackmenCaterpilars\LEFT\PackmanImg_104.bmp" />
+    <Content Include="Resources\PackmenCaterpilars\RIGHT\PackmanImg10.bmp" />
+    <Content Include="Resources\PackmenCaterpilars\RIGHT\PackmanImg101.bmp" />
+    <Content Include="Resources\PackmenCaterpilars\RIGHT\PackmanImg102.bmp" />
+    <Content Include="Resources\PackmenCaterpilars\RIGHT\PackmanImg103.bmp" />
+    <Content Include="Resources\PackmenCaterpilars\RIGHT\PackmanImg104.bmp" />
+    <Content Include="Resources\PackmenCaterpilars\UP\PackmanImg0_1.bmp" />
+    <Content Include="Resources\PackmenCaterpilars\UP\PackmanImg0_11.bmp" />
+    <Content Include="Resources\PackmenCaterpilars\UP\PackmanImg0_12.bmp" />
+    <Content Include="Resources\PackmenCaterpilars\UP\PackmanImg0_13.bmp" />
+    <Content Include="Resources\PackmenCaterpilars\UP\PackmanImg0_14.bmp" />
+    <Content Include="Resources\PauseButton.gif" />
+    <Content Include="Resources\PlayButton.gif" />
+    <Content Include="Resources\ProjectileImg\Projectile01.bmp" />
+    <Content Include="Resources\ProjectileImg\Projectile0_1.bmp" />
+    <Content Include="Resources\ProjectileImg\Projectile10.bmp" />
+    <Content Include="Resources\ProjectileImg\Projectile_10.bmp" />
+    <Content Include="Resources\TankCaterpilars\DOWN\TankImg01.bmp" />
+    <Content Include="Resources\TankCaterpilars\DOWN\TankImg011.bmp" />
+    <Content Include="Resources\TankCaterpilars\DOWN\TankImg012.bmp" />
+    <Content Include="Resources\TankCaterpilars\DOWN\TankImg013.bmp" />
+    <Content Include="Resources\TankCaterpilars\DOWN\TankImg014.bmp" />
+    <Content Include="Resources\TankCaterpilars\LEFT\TankImg_10.bmp" />
+    <Content Include="Resources\TankCaterpilars\LEFT\TankImg_101.bmp" />
+    <Content Include="Resources\TankCaterpilars\LEFT\TankImg_102.bmp" />
+    <Content Include="Resources\TankCaterpilars\LEFT\TankImg_103.bmp" />
+    <Content Include="Resources\TankCaterpilars\LEFT\TankImg_104.bmp" />
+    <Content Include="Resources\TankCaterpilars\RIGHT\TankImg10.bmp" />
+    <Content Include="Resources\TankCaterpilars\RIGHT\TankImg101.bmp" />
+    <Content Include="Resources\TankCaterpilars\RIGHT\TankImg102.bmp" />
+    <Content Include="Resources\TankCaterpilars\RIGHT\TankImg103.bmp" />
+    <Content Include="Resources\TankCaterpilars\RIGHT\TankImg104.bmp" />
+    <Content Include="Resources\TankCaterpilars\UP\TankImg0_1.bmp" />
+    <Content Include="Resources\TankCaterpilars\UP\TankImg0_11.bmp" />
+    <Content Include="Resources\TankCaterpilars\UP\TankImg0_12.bmp" />
+    <Content Include="Resources\TankCaterpilars\UP\TankImg0_13.bmp" />
+    <Content Include="Resources\TankCaterpilars\UP\TankImg0_14.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
