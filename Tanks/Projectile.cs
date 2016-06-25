@@ -13,7 +13,7 @@ namespace Tanks
     class Projectile
     {
         private ProjectileImg projectileImg = new ProjectileImg();
-        private int km; //Dalnist poliotu snariada
+        private int km; //Odległosć na któru leci Projektitle
         private Image img;
         public Image Img
         {

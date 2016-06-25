@@ -6,10 +6,10 @@ using System.Drawing;
 
 namespace Tanks
 {
-    class Tank : IRun, ITurn, ITurnAround, ITransparent, ICurentPicture // В цьому класі представлена вся логікаб яка відповідає за представлення нашого танка, за його переміщення,
-    {                                                                   //за взаємодію його з іншими обєктами.
+    class Tank : IRun, ITurn, ITurnAround, ITransparent, ICurentPicture // W tym klasie przedstawiona logika, która odpowiada za przedstawienia naszego czołga, za jego ruch,
+    {                                                                   //za otnoszenia z innymi czołgami.
         private TankImg tankImg = new TankImg();
-        private void PutImg() //розтавляє картінки по грі
+        private void PutImg() //Roztawia zdjecia w naszej gre
         {
             if (direct_x == 1)
                 img = tankImg.Right;
@@ -24,7 +24,7 @@ namespace Tanks
 
 
         protected Image[] img;
-        protected Image curentImg; // Конкретне зображення з таблиці картінок танка.
+        protected Image curentImg; // Konkretne zdjecia czołga
         protected int k;
         /// <summary>
         /// Wywołuje konkretnie zdjęcia czowga 
@@ -37,7 +37,7 @@ namespace Tanks
                 k = 0;
         }
         protected int sizeField;
-        protected int x, y, direct_x, direct_y; //переменниє двіженія танка (последние две)
+        protected int x, y, direct_x, direct_y; //direct_x, direct_y - zmiana ruchu czołga
         protected static Random r;
 
         public int Direct_x

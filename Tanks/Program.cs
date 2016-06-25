@@ -19,7 +19,7 @@ namespace Tanks
             Application.SetCompatibleTextRenderingDefault(false);
 
 
-            switch (arg.Length) //Аналізіруєм в якій кількості були передані параметри
+            switch (arg.Length) //Analizujemy w jakij ilosci były peredani parametry
             {
                 case 0: cm = new Controller_MainForm(); break;
                 case 1: cm = new Controller_MainForm(Convert.ToInt32(arg[0])); break;

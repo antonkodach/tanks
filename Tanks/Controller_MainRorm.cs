@@ -55,7 +55,7 @@ namespace Tanks
 
         private void StartPause_btn_Click(object sender, EventArgs e) //Naciskanie na knopku// 
         {
-            if (model.gameStatus == GameStatus.playing) // Коли граємо в гру - кнопка називаєиться плай
+            if (model.gameStatus == GameStatus.playing) // Kiedy gramy w gru przycisk nazywa się Stop, Kiedy gra stoi - przycisk nazywa się Play
             {
                 modelPlay.Abort();
                 model.gameStatus = GameStatus.stoping;
@@ -68,20 +68,20 @@ namespace Tanks
                 model.gameStatus = GameStatus.playing;
                 modelPlay = new Thread(model.Play);
                 modelPlay.Start();
-                StartStop_pcbx.Image = Properties.Resources.PauseButton; // натиснули кнопку стоп
+                StartStop_pcbx.Image = Properties.Resources.PauseButton; // Naciskamy przycisk Stop
                 ChangerStatusStripLbl();
-                view.Invalidate(); //Перерисовуємо наш юзер контрол
+                view.Invalidate(); //Pererysowuje nasz UserControl
             }
         }
 
-        private void Controller_MainForm_FormClosing(object sender, FormClosingEventArgs e) //Замиканє гри і всіх потоків
+        private void Controller_MainForm_FormClosing(object sender, FormClosingEventArgs e) //Zamykanie gry i wszystkich potoków
         {
             if (modelPlay != null)
 
                 model.gameStatus = GameStatus.stoping;
                 //modelPlay.Abort();
 
-          DialogResult dr = MessageBox.Show("Ви дійсно хочете вийти з гри?", "Танки", MessageBoxButtons.YesNoCancel);
+          DialogResult dr = MessageBox.Show("Do you want to exit from Games? // Ви дійсно хочете залишить гру?", "Танки", MessageBoxButtons.YesNoCancel);
           if (dr == DialogResult.Yes)
               e.Cancel = false;
           else
