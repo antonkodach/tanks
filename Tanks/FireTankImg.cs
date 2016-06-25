@@ -6,6 +6,9 @@ using System.Drawing;
 
 namespace Tanks
 {
+    /// <summary>
+    /// Klas, który wyłoluje potrzebne zdjęcia
+    /// </summary>
     class FireTankImg
     {
         Image[] img = new Image[] 

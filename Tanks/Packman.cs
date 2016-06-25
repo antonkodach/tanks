@@ -6,6 +6,9 @@ using System.Drawing;
 
 namespace Tanks
 {
+    /// <summary>
+    /// Tworzenia Pakmena
+    /// </summary>
     class Packman : IRun, ITurn, ITransparent, ICurentPicture
     {
         PackmanImg packmanImg = new PackmanImg();
@@ -65,7 +68,10 @@ namespace Tanks
                 else direct_y = 0;
             }
         }
-
+        /// <summary>
+        /// Pociatkowe koordynaty packmena i koordynaty przy ruchu
+        /// </summary>
+        /// <param name="sizeField"></param>
         public Packman(int sizeField)
         {
             this.sizeField = sizeField;
@@ -90,7 +96,9 @@ namespace Tanks
             get { return x; }
 
         }
-
+        /// <summary>
+        /// Metoda która odpowiada za ruch czowga na polu, wyznacz kiedy on porze skręcać
+        /// </summary>
         public void Run() //метода, яка рухає наші танки// Метод Run i метод Turn нерозривно зязані між собою, бо саме вони задають модель повідєнія танка на полі
         {
             
@@ -106,6 +114,9 @@ namespace Tanks
         }
 
         int k;
+        /// <summary>
+        /// Podstawia potrzebne zdjęcia
+        /// </summary>
         private void PutCurentImage()
         {
             curentImg = img[k];
@@ -113,7 +124,9 @@ namespace Tanks
             if (k == 5)
                 k = 0;
         }
-
+        /// <summary>
+        /// Wyznacza kiedy może skręcać Packmen
+        /// </summary>
         public void Turn()
         {
             Direct_x = NextDirect_x;
@@ -121,7 +134,9 @@ namespace Tanks
 
             PutImg();
         }
-
+        /// <summary>
+        /// Metoda która pozwala jeżdzic packmenu przez sciany
+        /// </summary>
         public void Transparent()
         {
             if (x == -1)
@@ -134,7 +149,9 @@ namespace Tanks
             if (y == sizeField - 19)
                 y = 1;
         }
-
+        /// <summary>
+        /// Przy skręceniu Packmena podstawia potrzebne zdjęcia
+        /// </summary>
         void PutImg()
         {
             if (direct_x == 1)

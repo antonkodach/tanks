@@ -5,10 +5,16 @@ using System.Text;
 
 namespace Tanks
 {
+    /// <summary>
+    /// Clas Tworzy obiekt Huntera
+    /// </summary>
     class Hunter : Tank
     {
 
         HunterImg hunterImg = new HunterImg();
+        /// <summary>
+        /// Naskrzyrzowaniu wyłoluje potrzebne zdjęcie
+        /// </summary>
         private void PutImg()
         {
             if (direct_x == 1)
@@ -20,7 +26,11 @@ namespace Tanks
             if (direct_y == -1)
                 img = hunterImg.Up;
         }
-
+        /// <summary>
+        /// Skręcenia Huntera
+        /// </summary>
+        /// <param name="target_x">koordynata Hunter</param>
+        /// <param name="target_y">koordynata Huntera</param>
         public void Turn(int target_x, int target_y) //Координати Пакмена
         {
             Direct_x = Direct_y = 0;
@@ -41,7 +51,11 @@ namespace Tanks
 
             PutImg();
         }
-
+        /// <summary>
+        /// Metoda odpowiada za ruch Huntera
+        /// </summary>
+        /// <param name="target_x"></param>
+        /// <param name="target_y"></param>
         public void Run(int target_x, int target_y)
         {
 
@@ -54,14 +68,21 @@ namespace Tanks
 
             Transparent();
         }
-
+        /// <summary>
+        /// Rozkrecenia Huntera przy spotkaniu z innymi czowgami
+        /// </summary>
         new public void TurnAround()
         {
             Direct_x = -1 * Direct_x;
             Direct_y = -1 * Direct_y;
             PutImg();
         }
-
+        /// <summary>
+        /// Bazowa realizacja konstruktora z trzema parametramy
+        /// </summary>
+        /// <param name="sizeField"></param>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
         public Hunter(int sizeField, int x, int y) 
             : base(sizeField, x, y) // базова реалізація конструктора яка приймає 3 параметри
         {

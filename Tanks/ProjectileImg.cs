@@ -7,6 +7,9 @@ using System.Drawing;
 
 namespace Tanks
 {
+    /// <summary>
+    /// Klas twoże kulu i rozkrenca je w potrzebnu nam strone kiedy strzeliamy
+    /// </summary>
     class ProjectileImg
     {
         Image up = Properties.Resources.Projectile0_1;

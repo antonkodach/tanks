@@ -5,6 +5,9 @@ using System.Text;
 
 namespace Tanks
 {
+    /// <summary>
+    /// Wyznacza sttus gry
+    /// </summary>
     enum GameStatus
     {
         playing,

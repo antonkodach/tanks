@@ -5,7 +5,10 @@ using System.Text;
 using System.Drawing;
 
 namespace Tanks
-{
+{   
+    /// <summary>
+    /// Klas odpowiada za tworzenie obiektu(jabłka)
+    /// </summary>
     class Apple : IPicture
     {
          AppleImg appleImg = new AppleImg();
@@ -27,7 +30,11 @@ namespace Tanks
         {
             get { return img; }           
         }
-
+        /// <summary>
+        /// Przypisanie, gdzie będzie wyłolane jabłko 
+        /// </summary>
+        /// <param name="x">koordynata jabłka</param>
+        /// <param name="y">koordynata jabłka</param>
         public Apple(int x, int y)
         {
             img = appleImg.Img;

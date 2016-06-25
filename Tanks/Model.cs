@@ -7,6 +7,9 @@ using System.Threading;
 namespace Tanks
 {
     public delegate void STREEP();
+    /// <summary>
+    /// W tym klasie pobudowana logika do całego projektu
+    /// </summary>
     class Model // Будуємо нашу логіку в цьому класі
     {
         public event STREEP changeStreep;
@@ -52,7 +55,13 @@ namespace Tanks
         
         
         public Wall wall;
-
+        /// <summary>
+        /// Metoda kieruje i manipuliuje wszystkiema obiektami w tym projekcie
+        /// </summary>
+        /// <param name="sizeField"> rozmiar pola</param>
+        /// <param name="amountTanks"> ilosć czowgów</param>
+        /// <param name="amountApples">ilosć jabłuk</param>
+        /// <param name="speedGame">szybkosć gry</param>
         public Model(int sizeField, int amountTanks, int amountApples, int speedGame) // Керує і маніпулює всіма обєктами в нашій грі
         {
             r = new Random();
@@ -66,11 +75,15 @@ namespace Tanks
 
             NewGame();
         }
+        
         private void CreateApples()
         {
             CreateApples(0);
         }
-
+        /// <summary>
+        /// Tworzenie i dodawanie nowych jabłuk na pole gry
+        /// </summary>
+        /// <param name="newApples">dodaje nowe jabłko, kiedy Packmen wezmie jedne</param>
         private void CreateApples(int newApples)
         {
             int x, y;
@@ -91,7 +104,9 @@ namespace Tanks
                     apples.Add(new Apple(x, y));
             }
         }
-
+        /// <summary>
+        /// Tworzenie czowgów na pole gry
+        /// </summary>
         private void CreateTanks()
         {
             int x, y;
@@ -116,6 +131,10 @@ namespace Tanks
                     tanks.Add(new Tank(sizeField, x, y));
             }
         }
+        /// <summary>
+        /// Odpowiada za włączenie/wyłączenie gry,podbicie czowgów,kierowanie chowgami i Hunterem,
+        /// podbiór jabłek packmenem, wyznacza gameStatus
+        /// </summary>
         public void Play() // Odpowiada za włączanie i wyłączanie gry
         {
             while (gameStatus == GameStatus.playing)
@@ -188,7 +207,9 @@ namespace Tanks
             }
         }
         int step;
-
+        /// <summary>
+        /// Metoda, która odpowiada za włączenie nowej gry, nadaje początkowe polożenia obiektam na początku każdej nowej gry
+        /// </summary>
         internal void NewGame()
         {
             collectedApples = 0; // 0 jabluk na poczatku kazdoji gry

@@ -26,6 +26,9 @@ namespace Tanks
         protected Image[] img;
         protected Image curentImg; // Конкретне зображення з таблиці картінок танка.
         protected int k;
+        /// <summary>
+        /// Wywołuje konkretnie zdjęcia czowga 
+        /// </summary>
         protected void PutCurentImage() //Виводе конкретні зображення танка підряд
         {
             curentImg = img[k];
@@ -57,7 +60,12 @@ namespace Tanks
                 else direct_y = 0;
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sizeField">rozmiar pola</param>
+        /// <param name="x">koordynata czowga</param>
+        /// <param name="y">koordynata czowga</param>
         public Tank(int sizeField, int x, int y)
         {
             this.sizeField = sizeField;
@@ -85,7 +93,9 @@ namespace Tanks
             this.x = x;
             this.y = y;
         }
-
+        /// <summary>
+        /// Metoda zwraca konkretne zdjęcia
+        /// </summary>
         public Image CurentImg
         {
             get { return curentImg; }
@@ -100,6 +110,9 @@ namespace Tanks
             get { return x; }
            
         }
+        /// <summary>
+        /// Metoda, która  rucha nasze czowgi
+        /// </summary>
         public void Run() //метода, яка рухає наші танки// Метод Run i метод Turn нерозривно зязані між собою, бо саме вони задають модель повідєнія танка на полі
         {
             
@@ -113,6 +126,9 @@ namespace Tanks
             Transparent();
             
         }
+        /// <summary>
+        /// Odpowiada za skręcanie czowgów
+        /// </summary>
         public void Turn() //повороти танка
         {                        
                 if (r.Next(5000) < 2500) // рухаємося далі по аертикалі
@@ -136,6 +152,10 @@ namespace Tanks
                 
             PutImg();
         }
+        /// <summary>
+        /// Metoda odpowiada za to, żeby czowgi mogły jeżdzić przez sciany(W góre wjechaw - z doly wyjechaw, 
+        /// w lewu scianu wjechad - z prawej wyjechaw)
+        /// </summary>
         public void Transparent() // прозрачність стін( в праву вїхав - з лівох виїхав)
         {
             if (x == -1)
@@ -148,6 +168,9 @@ namespace Tanks
             if (y == sizeField - 19)
                 y = 1;
         }
+        /// <summary>
+        /// Metoda odpowiada za rozkręcenie czowgów przy spotkaniu
+        /// </summary>
         public void TurnAround() // Розворот танків при зіткненні
         {
             Direct_x = -1 * Direct_x;

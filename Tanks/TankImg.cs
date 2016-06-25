@@ -6,6 +6,9 @@ using System.Drawing;
 
 namespace Tanks
 {
+    /// <summary>
+    /// Clas odpowiada za wywolanie potrzebnego, konkretnego zdjęcia dla czowga w pełny moment
+    /// </summary>
     class TankImg
     {
         Image[] up = new Image[] {

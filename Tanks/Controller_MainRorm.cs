@@ -7,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading;
+using System.Media;
 
 namespace Tanks
 {
+    /// <summary>
+    /// W tym klasie opisany control naszą formą
+    /// </summary>
     public partial class Controller_MainForm : Form
     {
         View view;
         Model model;
         bool isSound;
+        SoundPlayer sp;
 
         Thread modelPlay; // Stworzylismy nowy potok gry
 
@@ -31,11 +36,21 @@ namespace Tanks
             this.Controls.Add(view); // Помістили на форму створений об'єкт
 
             isSound = true;
+            sp = new SoundPlayer(Properties.Resources.TankMov);
         }
-
+         /// <summary>
+         /// Ta metoda włącza i wyłacza dżwieńk, i pokażuje status gry 
+         /// </summary>
         void ChangerStatusStripLbl() // zminiuje ststus gry z nyzu
         {
             GameStatus_lbl_ststrp.Text = model.gameStatus.ToString();
+            if (isSound)
+            {
+                if (model.gameStatus == GameStatus.playing)
+                    sp.PlayLooping();
+                else
+                    sp.Stop();
+            }
         }
 
         private void StartPause_btn_Click(object sender, EventArgs e) //Naciskanie na knopku// 

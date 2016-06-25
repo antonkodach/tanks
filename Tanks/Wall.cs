@@ -6,6 +6,9 @@ using System.Drawing;
 
 namespace Tanks
 {
+    /// <summary>
+    /// Tworze sciany żówto-niebieskie
+    /// </summary>
     class Wall : IPicture
     {
         WallImg wallImg = new WallImg();

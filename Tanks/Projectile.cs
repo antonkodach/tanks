@@ -7,6 +7,9 @@ using System.Drawing;
 
 namespace Tanks
 {
+    /// <summary>
+    /// Tworzenie kuli dla packmena(strelia packmen kulami)
+    /// </summary>
     class Projectile
     {
         private ProjectileImg projectileImg = new ProjectileImg();
@@ -19,7 +22,9 @@ namespace Tanks
         }
 
         int x, y, direct_x, direct_y;
-
+        /// <summary>
+        /// Kulia leci i znika
+        /// </summary>
         public Projectile()
         {
             img = projectileImg.Up;
@@ -65,7 +70,9 @@ namespace Tanks
                 else direct_y = 0;
             }
         }
-
+        /// <summary>
+        /// Odpowiada za ruch kuli, Wyznacza na jaku odległać leci kula
+        /// </summary>
         public void Run()
         {
             if (Direct_x == 0 && Direct_y == 0)
@@ -77,7 +84,9 @@ namespace Tanks
             if (km > 120) // Dalnist poliotu snariadu
                 DefaultSetting();
         }
-
+        /// <summary>
+        /// Podstawia zdjęcia po kolejnici przy ruchu w kazdą strone
+        /// </summary>
         private void PutImg()
         {
             if (direct_x == 1)

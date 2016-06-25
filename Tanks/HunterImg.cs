@@ -6,6 +6,9 @@ using System.Drawing;
 
 namespace Tanks
 {
+    /// <summary>
+    /// Clas podstawia podstawia potrzebne zdjecia Huntera przy ruchu w różne strony
+    /// </summary>
     class HunterImg
     {
         Image[] up = new Image[] {

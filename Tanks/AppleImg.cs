@@ -6,6 +6,9 @@ using System.Drawing;
 
 namespace Tanks
 {
+    /// <summary>
+    /// Tworzenie jabłka, zdjęcia
+    /// </summary>
     class AppleImg
     {
         Image img = Properties.Resources.Apple;

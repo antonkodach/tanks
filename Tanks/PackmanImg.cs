@@ -6,6 +6,9 @@ using System.Drawing;
 
 namespace Tanks
 {
+    /// <summary>
+    /// Podstawia po kolejnoci zdjęcia w kazdą strone ruchu
+    /// </summary>
     class PackmanImg
     {
         Image[] up = new Image[] {

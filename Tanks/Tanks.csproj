@@ -116,6 +116,7 @@
     <None Include="Resources\Wall.bmp" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\TankMov.wav" />
     <None Include="Resources\Apple.bmp" />
     <Content Include="Resources\FireTank\FireTank1.bmp" />
     <Content Include="Resources\FireTank\FireTank2.bmp" />
